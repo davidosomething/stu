@@ -3,19 +3,17 @@
 services:
   minecraft:
     environment:
-      CF_MODPACK_ZIP: "/extras/stone-technology-ultimate.zip"
-      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/stone-technology-ultimate"
-      CF_FORCE_INCLUDE_MODS: "520110,499826"
       EULA: "TRUE"
       GID: "1000"
       LEVEL_TYPE: "skyblockbuilder:skyblock"
       MEMORY: "6G"
-      UID: "1000"
-      MODPACK_PLATFORM: "AUTO_CURSEFORGE"
       MOTD: "Stone Technology Ultimate"
       OPS: |
         davidosomething
       TZ: America/New_York
+      TYPE: "FORGE"
+      UID: "1000"
+      VERSION: "1.18.2"
     image: itzg/minecraft-server:java17
     labels:
       glance.category: stu
@@ -29,4 +27,3 @@ services:
     userns_mode: "host"
     volumes:
       - ./data:/data:Z
-      - ./extras:/extras:Z
